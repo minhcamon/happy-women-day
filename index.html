@@ -1,0 +1,243 @@
+<!DOCTYPE html>
+<html lang="vi">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Chúc mừng ngày 8/3 🌸 (Bản Cập Nhật Grid & Modal)</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link href="https://fonts.googleapis.com/css2?family=Dancing+Script:wght@700&family=Inter:wght@400;500;600&display=swap" rel="stylesheet">
+    <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+    
+    <style>
+        body { font-family: 'Inter', sans-serif; }
+        .font-cursive { font-family: 'Dancing Script', cursive; }
+        /* Animation nhún nhảy nhẹ cho hộp quà */
+        @keyframes bounce-slight {
+            0%, 100% { transform: translateY(0); }
+            50% { transform: translateY(-5px); }
+        }
+        .animate-bounce-slight { animation: bounce-slight 2s infinite ease-in-out; }
+    </style>
+</head>
+<body class="bg-gradient-to-br from-pink-50 via-red-50 to-purple-100 min-h-screen text-gray-800 selection:bg-pink-300 selection:text-white relative overflow-x-hidden">
+
+    <header class="pt-20 pb-12 px-4 text-center">
+        <div class="inline-block mb-4 p-4 bg-white rounded-full shadow-lg text-pink-500 animate-bounce-slight">
+            <i class="fa-solid fa-gem text-4xl"></i>
+        </div>
+        <h1 class="text-5xl md:text-7xl font-cursive text-pink-600 mb-4 drop-shadow-sm">Happy Women's Day</h1>
+        <p class="text-lg md:text-xl max-w-2xl mx-auto text-gray-600 leading-relaxed">
+            Nhân ngày 8/3, gửi đến một nửa thế giới tuyệt vời nhất những lời chúc tốt đẹp nhất. 
+            Cảm ơn vì đã luôn toả sáng theo cách riêng của mình! 💖
+        </p>
+    </header>
+
+    <section class="max-w-5xl mx-auto px-4 py-12">
+        <h2 class="text-3xl font-bold text-center text-purple-700 mb-10">Gói Quà Tinh Thần Độc Quyền ✨</h2>
+        
+        <div class="grid grid-cols-2 md:grid-cols-4 gap-4 md:gap-6">
+            <div class="bg-white/80 backdrop-blur-sm p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border border-pink-100 text-center cursor-pointer group" onclick="openModal('gift-modal-1')">
+                <div class="w-14 h-14 md:w-16 md:h-16 mx-auto bg-pink-100 rounded-full flex items-center justify-center text-pink-500 text-2xl mb-4 group-hover:scale-110 transition">
+                    <i class="fa-regular fa-face-smile-beam"></i>
+                </div>
+                <h3 class="font-bold text-base md:text-lg mb-2 text-gray-800">100 Lời Khen</h3>
+                <p class="text-gray-500 text-xs md:text-sm">Xác nhận bạn luôn xinh đẹp, giỏi giang và đầy năng lượng mỗi ngày.</p>
+            </div>
+
+            <div class="bg-white/80 backdrop-blur-sm p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border border-purple-100 text-center cursor-pointer group" onclick="openModal('gift-modal-2')">
+                <div class="w-14 h-14 md:w-16 md:h-16 mx-auto bg-purple-100 rounded-full flex items-center justify-center text-purple-500 text-2xl mb-4 group-hover:scale-110 transition">
+                    <i class="fa-solid fa-hand-holding-heart"></i>
+                </div>
+                <h3 class="font-bold text-base md:text-lg mb-2 text-gray-800">Một Cái Ôm Trực Tuyến</h3>
+                <p class="text-gray-500 text-xs md:text-sm">Sạc đầy năng lượng tích cực bất cứ khi nào bạn cảm thấy mệt mỏi.</p>
+            </div>
+
+            <div class="bg-white/80 backdrop-blur-sm p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border border-red-100 text-center cursor-pointer group" onclick="openModal('gift-modal-3')">
+                <div class="w-14 h-14 md:w-16 md:h-16 mx-auto bg-red-100 rounded-full flex items-center justify-center text-red-500 text-2xl mb-4 group-hover:scale-110 transition">
+                    <i class="fa-solid fa-ear-listen"></i>
+                </div>
+                <h3 class="font-bold text-base md:text-lg mb-2 text-gray-800">Đặc Quyền Lắng Nghe</h3>
+                <p class="text-gray-500 text-xs md:text-sm">Sẵn sàng nghe bạn than vãn về mọi thứ trên đời.</p>
+            </div>
+
+            <div class="bg-white/80 backdrop-blur-sm p-4 md:p-6 rounded-2xl shadow-sm hover:shadow-xl hover:-translate-y-2 transition duration-300 border border-rose-100 text-center cursor-pointer group" onclick="openModal('gift-modal-4')">
+                <div class="w-14 h-14 md:w-16 md:h-16 mx-auto bg-rose-100 rounded-full flex items-center justify-center text-rose-500 text-2xl mb-4 group-hover:scale-110 transition">
+                    <i class="fa-solid fa-mug-hot"></i>
+                </div>
+                <h3 class="font-bold text-base md:text-lg mb-2 text-gray-800">Voucher Trà Sữa Thảnh Thơi</h3>
+                <p class="text-gray-500 text-xs md:text-sm">Một ngày nghỉ ngơi trọn vẹn, chỉ có chill và thư giãn.</p>
+            </div>
+        </div>
+    </section>
+
+    <section class="max-w-3xl mx-auto px-4 py-16 text-center">
+        <div id="surprise-teaser">
+            <h2 class="text-2xl font-bold text-gray-800 mb-4">Vẫn còn một điều nữa...</h2>
+            <p class="text-gray-600 mb-8">Một bất ngờ nho nhỏ ở phút chót dành riêng cho bạn! Hãy mở hộp quà này nhé.</p>
+            <button onclick="revealSurprise()" class="bg-gradient-to-r from-pink-500 to-purple-500 text-white font-bold py-4 px-8 rounded-full shadow-lg hover:shadow-2xl hover:scale-105 transition duration-300 flex items-center justify-center mx-auto space-x-2">
+                <i class="fa-solid fa-gift text-xl"></i>
+                <span>Mở Quà Ngay!</span>
+            </button>
+        </div>
+
+        <div id="surprise-content" class="hidden opacity-0 transition-opacity duration-1000 ease-in-out">
+            <div class="bg-white p-6 md:p-8 rounded-3xl shadow-2xl border-2 border-pink-200">
+                <span class="inline-block px-4 py-1 bg-pink-100 text-pink-600 rounded-full text-sm font-bold mb-4 tracking-wider uppercase">Thư Mời Tham Dự</span>
+                <h2 class="text-3xl font-cursive text-pink-600 mb-2">Workshop: Take Your Time</h2>
+                <h3 class="text-xl font-bold text-gray-800 mb-4">Tự tay làm móc khoá xinh xắn 🎨</h3>
+                <p class="text-gray-600 mb-6 max-w-lg mx-auto">
+                    Cùng gác lại những bộn bề, tụi mình ngồi xuống vọc vạch đất sét tự khô, pha màu và đổ thêm chút mica để làm ra những chiếc móc khoá mang đậm dấu ấn cá nhân nhé!
+                </p>
+                
+                <div class="relative w-full overflow-hidden pt-[100%] sm:pt-[80%] md:pt-[70%] rounded-xl bg-gray-50 border border-gray-100">
+                    <iframe 
+                        src="https://docs.google.com/forms/d/e/1FAIpQLSfxCh9_8f_vPrYmwhQoBUD9L2TljRz0H8qexqehLl1VZDg0yw/formResponse" 
+                        class="absolute top-0 left-0 w-full h-full border-0"
+                        title="Form đăng ký Workshop"
+                    >Đang tải…</iframe>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer class="text-center py-8 text-gray-500 text-sm">
+        <p>Made with <i class="fa-solid fa-heart text-red-400"></i> for Women's Day.</p>
+    </footer>
+
+    <div id="gift-modal-1" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeModalOnOverlay(event, 'gift-modal-1')">
+        <div class="relative bg-white p-8 rounded-2xl shadow-2xl max-w-sm w-full border border-pink-100">
+            <button onclick="closeModal('gift-modal-1')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><i class="fa-solid fa-times text-xl"></i></button>
+            <div class="w-16 h-16 mx-auto bg-pink-100 rounded-full flex items-center justify-center text-pink-500 text-2xl mb-6"><i class="fa-regular fa-face-smile-beam"></i></div>
+            <h3 class="font-bold text-2xl mb-4 text-gray-800 text-center">Gửi Lời Khen Nhé!</h3>
+            <p class="text-gray-600 text-center mb-6">Bạn biết gì không? Hôm nay, bạn cười xinh lắm! Cố gắng của bạn trong công việc cũng rất tuyệt vời đấy!</p>
+            <button onclick="closeModal('gift-modal-1')" class="w-full bg-pink-500 text-white font-bold py-3 rounded-lg hover:bg-pink-600 transition">Cảm ơn nè!</button>
+        </div>
+    </div>
+
+    <div id="gift-modal-2" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeModalOnOverlay(event, 'gift-modal-2')">
+        <div class="relative bg-white p-8 rounded-2xl shadow-2xl max-w-sm w-full border border-purple-100">
+            <button onclick="closeModal('gift-modal-2')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><i class="fa-solid fa-times text-xl"></i></button>
+            <div class="w-16 h-16 mx-auto bg-purple-100 rounded-full flex items-center justify-center text-purple-500 text-2xl mb-6"><i class="fa-solid fa-hand-holding-heart"></i></div>
+            <h3 class="font-bold text-2xl mb-4 text-gray-800 text-center">Một Cái Ôm Nhé!</h3>
+            <p class="text-gray-600 text-center mb-6">Hãy tưởng tượng chúng mình đang ở bên nhau. Một cái ôm ấm áp, sạc đầy năng lượng để bạn cảm thấy được sẻ chia!</p>
+            <button onclick="closeModal('gift-modal-2')" class="w-full bg-purple-500 text-white font-bold py-3 rounded-lg hover:bg-purple-600 transition">Mình nhận rồi nè!</button>
+        </div>
+    </div>
+
+    <div id="gift-modal-3" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeModalOnOverlay(event, 'gift-modal-3')">
+        <div class="relative bg-white p-8 rounded-2xl shadow-2xl max-w-md w-full border border-red-100">
+            <button onclick="closeModal('gift-modal-3')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><i class="fa-solid fa-times text-xl"></i></button>
+            <div class="w-16 h-16 mx-auto bg-red-100 rounded-full flex items-center justify-center text-red-500 text-2xl mb-6"><i class="fa-solid fa-ear-listen"></i></div>
+            <h3 class="font-bold text-2xl mb-4 text-gray-800 text-center">Gửi Tụi Mình Chuyện Này!</h3>
+            <p class="text-gray-600 text-center mb-6">Bất cứ khi nào bạn muốn, cứ nhắn chuyện gì đang xảy ra. Tụi mình sẽ ở đây để lắng nghe mà không hề phán xét!</p>
+            <button onclick="closeModal('gift-modal-3')" class="w-full bg-red-500 text-white font-bold py-3 rounded-lg hover:bg-red-600 transition">Gửi tin nhắn ngay!</button>
+        </div>
+    </div>
+
+    <div id="gift-modal-4" class="hidden fixed inset-0 z-50 bg-black/60 flex items-center justify-center p-4 transition-opacity duration-300 opacity-0" onclick="closeModalOnOverlay(event, 'gift-modal-4')">
+        <div class="relative bg-white p-8 rounded-2xl shadow-2xl max-w-sm w-full border border-rose-100">
+            <button onclick="closeModal('gift-modal-4')" class="absolute top-4 right-4 text-gray-400 hover:text-gray-600"><i class="fa-solid fa-times text-xl"></i></button>
+            <div class="w-16 h-16 mx-auto bg-rose-100 rounded-full flex items-center justify-center text-rose-500 text-2xl mb-6"><i class="fa-solid fa-mug-hot"></i></div>
+            <h3 class="font-bold text-2xl mb-4 text-gray-800 text-center">Sử Dụng Voucher Nhé!</h3>
+            <p class="text-gray-600 text-center mb-6">Hôm nay hãy để cho bản thân nghỉ ngơi, làm những điều bạn thích, không phải bận tâm gì cả nhé!</p>
+            <button onclick="closeModal('gift-modal-4')" class="w-full bg-rose-500 text-white font-bold py-3 rounded-lg hover:bg-rose-600 transition">Thảnh thơi liền!</button>
+        </div>
+    </div>
+
+    <script>
+        // Mở Modal và thêm hiệu ứng fade-in
+        function openModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.remove('hidden');
+            setTimeout(() => {
+                modal.classList.remove('opacity-0');
+            }, 10); // Cần một độ trễ nhỏ để Tailwind thêm animation
+        }
+
+        // Đóng Modal và hiệu ứng fade-out
+        function closeModal(modalId) {
+            const modal = document.getElementById(modalId);
+            modal.classList.add('opacity-0');
+            setTimeout(() => {
+                modal.classList.add('hidden');
+            }, 300); // 300ms là thời gian animation mặc định của Tailwind transition duration-300
+        }
+
+        // Đóng Modal khi nhấp vào vùng tối (overlay) bên ngoài popup content
+        function closeModalOnOverlay(event, modalId) {
+            if (event.target.id === modalId) {
+                closeModal(modalId);
+            }
+        }
+
+        // Đóng bất kỳ modal nào khi nhấn phím Escape
+        document.addEventListener('keydown', function(event) {
+            if (event.key === "Escape") {
+                const modals = document.querySelectorAll('[id^="gift-modal-"]');
+                modals.forEach(modal => {
+                    if (!modal.classList.contains('hidden')) {
+                        closeModal(modal.id);
+                    }
+                });
+            }
+        });
+
+        // HÀM GỐC: Reveal Surprise + Confetti
+        function revealSurprise() {
+            // 1. Ẩn nút teaser
+            const teaser = document.getElementById('surprise-teaser');
+            teaser.style.display = 'none';
+
+            // 2. Hiện nội dung bất ngờ (Workshop + Google Form)
+            const content = document.getElementById('surprise-content');
+            content.classList.remove('hidden');
+            
+            // Timeout nhỏ để hiệu ứng fade-in mượt hơn
+            setTimeout(() => {
+                content.classList.remove('opacity-0');
+            }, 50);
+
+            // 3. Bắn pháo giấy chúc mừng
+            fireConfetti();
+            
+            // Cuộn mượt xuống phần form đăng ký
+            setTimeout(() => {
+                content.scrollIntoView({ behavior: 'smooth', block: 'start' });
+            }, 300);
+        }
+
+        // HÀM GỐC: Confetti
+        function fireConfetti() {
+            var duration = 3 * 1000;
+            var animationEnd = Date.now() + duration;
+            var defaults = { startVelocity: 30, spread: 360, ticks: 60, zIndex: 0 };
+
+            function randomInRange(min, max) {
+                return Math.random() * (max - min) + min;
+            }
+
+            var interval = setInterval(function() {
+                var timeLeft = animationEnd - Date.now();
+
+                if (timeLeft <= 0) {
+                    return clearInterval(interval);
+                }
+
+                var particleCount = 50 * (timeLeft / duration);
+                
+                confetti(Object.assign({}, defaults, { 
+                    particleCount, 
+                    origin: { x: randomInRange(0.1, 0.3), y: Math.random() - 0.2 },
+                    colors: ['#ffc0cb', '#ff69b4', '#9370db', '#ffffff'] // Màu hồng/tím
+                }));
+                confetti(Object.assign({}, defaults, { 
+                    particleCount, 
+                    origin: { x: randomInRange(0.7, 0.9), y: Math.random() - 0.2 },
+                    colors: ['#ffc0cb', '#ff69b4', '#9370db', '#ffffff']
+                }));
+            }, 250);
+        }
+    </script>
+</body>
+</html>
